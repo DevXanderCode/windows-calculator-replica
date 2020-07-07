@@ -1,0 +1,46 @@
+.column-3{
+    width: 75%;
+    float: left;
+}
+.column-2{
+    width: 50%;
+    float: left;
+}
+.column-1{
+    width: 25%;
+    float: left;
+}
+
+button.calc-button{
+    width: 100%;
+    font-size: 2rem;
+    height: 6.25rem;
+    border: 2px solid #ddd;
+    color: #555;
+    background: #eee
+}
+
+input.result{
+    height: 6.25rem;
+    width: 100%;
+    text-align: right;
+    font-size: 2rem;
+    border: none;
+    /* max-width: 100vh; */
+    position: relative;
+    margin-right: 2rem;
+    float: right;
+}
+
+input.result:hover{
+    border: none;
+    outline: none;
+}
+
+.previous{
+    position: absolute;
+    right: 3rem;
+    z-index: 1;
+    color: #aaa;
+    top: 0.625rem;
+}
