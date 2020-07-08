@@ -5,7 +5,7 @@ import React from "react";
 const Button = ({ symbol, cols, action }) => {
     return(
         <div className={`column-${cols}`}>
-            <button className="calc-button" onClick={() => action(symbol)}>{symbol}</button>
+            <button className="calc-button" onClick={() => action(symbol)}>{ symbol === "*" ? "X" : symbol}</button>
         </div>
     );
 }
