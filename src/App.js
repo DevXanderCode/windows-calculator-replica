@@ -32,8 +32,10 @@ class App extends Component{
 
   calculate =  (symbol) => {
     let { previous, current, nextIsReset } = this.state;
+    
     if (previous.length > 0)  {
-      current = string(previous[previous.length - 1] + current);
+      current = string(previous.splice(0) + current).replace(/,/g,"");
+      console.log(current);
       this.setState({current: math.evaluate(current), previous: [], nextIsReset: true });
     } 
 
