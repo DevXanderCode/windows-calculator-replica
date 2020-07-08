@@ -31,17 +31,17 @@ class App extends Component{
   }
 
   calculate =  (symbol) => {
-    let { previous, current, nextIsReset } = this.state;
+    let { previous, current } = this.state;
     
     if (previous.length > 0)  {
       current = string(previous.splice(0) + current).replace(/,/g,"");
-      console.log(current);
       this.setState({current: math.evaluate(current), previous: [], nextIsReset: true });
     } 
-
   }
+  
   render(){
     let {previous, current} = this.state;
+    console.log(previous);
     const buttons = [
       { symbol: "C", cols: 3, action: this.reset },
       { symbol: "/", cols: 1, action: this.addToCurrent },
