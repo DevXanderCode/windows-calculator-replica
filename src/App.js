@@ -41,7 +41,6 @@ class App extends Component{
   
   render(){
     let {previous, current} = this.state;
-    console.log(previous);
     const buttons = [
       { symbol: "C", cols: 3, action: this.reset },
       { symbol: "/", cols: 1, action: this.addToCurrent },
